@@ -30,6 +30,7 @@ interface BlockProps {
 
   className?: string
   bodyClassName?: string
+  frameClassName?: string
 
   header?: React.ReactNode
   footer?: React.ReactNode
@@ -76,6 +77,7 @@ export const Block: React.FC<BlockProps> = (props) => {
     level,
     className,
     bodyClassName,
+    frameClassName,
     header,
     footer,
     pageHeader,
@@ -158,7 +160,7 @@ export const Block: React.FC<BlockProps> = (props) => {
             >
               <div className='notion-viewport' />
 
-              <div className='notion-frame'>
+              <div className={cs('notion-frame', frameClassName)}>
                 {!disableHeader && <components.Header block={block} />}
                 {header}
 
