@@ -22,9 +22,6 @@
     "watch:tsup": "lerna run watch --no-private --parallel",
     "link": "lerna exec \"yarn link\" --no-private",
     "dev": "run-s watch",
-    "prebuild": "run-s clean",
-    "prewatch": "run-s clean",
-    "clean": "del packages/*/build",
     "pretest": "run-s build",
     "test": "run-p test:*",
     "test:unit": "lerna run test",
@@ -35,7 +32,6 @@
     "deploy": "lerna publish",
     "preinstall": "node -e \"if (process.env.npm_execpath.indexOf('yarn') < 0) throw new Error('this package requires yarn for development')\"",
     "postinstall": "run-s bootstrap",
-    "prepare": "cd .. && husky install",
     "pre-commit": "lint-staged"
   },
   "devDependencies": {

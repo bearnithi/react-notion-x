@@ -1,18 +1,17 @@
 {
   "name": "react-notion-x",
-  "version": "6.13.10",
+  "version": "6.13.11",
   "type": "module",
   "description": "Fast and accurate React renderer for Notion.",
   "repository": "NotionX/react-notion-x",
   "author": "Travis Fischer <travis@transitivebullsh.it>",
   "license": "MIT",
-  "main": "./build/index.js",
-  "module": "./build/index.js",
-  "types": "./build/index.d.ts",
+  "main": "./building/index.js",
+  "module": "./building/index.js",
+  "types": "./building/index.d.ts",
   "sideEffects": false,
   "files": [
-    "build",
-    "src/styles.css"
+    "*"
   ],
   "engines": {
     "node": ">=12"
